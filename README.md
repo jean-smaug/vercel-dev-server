@@ -17,7 +17,7 @@ npm install -D vercel-dev-server
 ```ts
 // dev.js
 
-const { createVercelServer } = require("@packages/vercel-dev-server");
+const { createVercelServer } = require("vercel-dev-server");
 
 createVercelServer().then((server) => {
   const PORT = 8080;
@@ -49,3 +49,18 @@ pnpm add -D nodemon
   }
 }
 ```
+
+The last is the creation of a Vercel project. You must have an `api` folder with your cloud functions inside.
+
+```text
+/
+├─ node_modules/
+├─ api/
+│  ├─ [id].js
+│  ├─ index.js
+│  ├─ info.js
+├─ dev.js
+├─ package.json
+```
+
+This package doesn't transpile your code. Check `examples` folder to see how to use it with custom config.
