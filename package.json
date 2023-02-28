@@ -4,6 +4,10 @@
   "description": "A Node.js server that is emulating Vercel cloud functions. It does support monorepos",
   "main": "./build/main.js",
   "types": "./build/main.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jean-smaug/vercel-dev-server"
+  },
   "scripts": {
     "release": "release-it",
     "build": "tsc",
