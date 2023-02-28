@@ -16,8 +16,6 @@ export async function createVercelServer() {
   });
 
   const matchRouteApiPaths = routeApiPaths.map((path) => {
-    console.log("-->", path.replace(/\[(.+)\]/g, ":$1"));
-
     // eslint-disable-next-line unicorn/better-regex
     return match(path.replace(/\[(.+)\]/g, ":$1"), {
       decode: decodeURIComponent,
