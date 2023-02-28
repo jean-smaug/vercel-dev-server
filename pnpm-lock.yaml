@@ -1,20 +1,27 @@
 lockfileVersion: 5.4
 
-specifiers:
-  '@types/glob': 8.1.0
-  '@vercel/node': 2.9.9
-  glob: 9.0.1
-  path-to-regexp: 6.2.1
-  typescript: 4.9.5
+importers:
 
-dependencies:
-  glob: 9.0.1
-  path-to-regexp: 6.2.1
+  .:
+    specifiers:
+      '@types/glob': 8.1.0
+      '@vercel/node': 2.9.9
+      glob: 9.0.1
+      path-to-regexp: 6.2.1
+      typescript: 4.9.5
+    dependencies:
+      glob: 9.0.1
+      path-to-regexp: 6.2.1
+    devDependencies:
+      '@types/glob': 8.1.0
+      '@vercel/node': 2.9.9
+      typescript: 4.9.5
 
-devDependencies:
-  '@types/glob': 8.1.0
-  '@vercel/node': 2.9.9
-  typescript: 4.9.5
+  example:
+    specifiers:
+      vercel-dev-server: file:../
+    dependencies:
+      vercel-dev-server: 'file:'
 
 packages:
 
@@ -766,3 +773,12 @@ packages:
     resolution: {integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==}
     engines: {node: '>=6'}
     dev: true
+
+  'file:':
+    resolution: {directory: '', type: directory}
+    name: vercel-dev-server
+    version: 0.0.0
+    dependencies:
+      glob: 9.0.1
+      path-to-regexp: 6.2.1
+    dev: false
