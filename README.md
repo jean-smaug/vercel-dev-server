@@ -63,4 +63,4 @@ The last is the creation of a Vercel project. You must have an `api` folder with
 ├─ package.json
 ```
 
-This package doesn't transpile your code. Check `examples` folder to see how to use it with custom config.
+This package doesn't transpile your code. Check [examples](https://github.com/jean-smaug/vercel-dev-server/tree/master/examples) folder to see how to use it with custom config.
