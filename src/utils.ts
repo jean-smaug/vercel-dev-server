@@ -1,7 +1,10 @@
+import util from "node:util";
 import path from "node:path";
 import { IncomingMessage, ServerResponse } from "node:http";
 import { VercelResponse } from "@vercel/node";
 import glob from "glob";
+
+const globPromise = util.promisify(glob);
 
 /**
  * Retrieve all files in api folder
@@ -12,7 +15,7 @@ import glob from "glob";
  * ["/api/foo", "/api/[userId]/posts"]
  */
 export async function getApiPaths(): Promise<string[]> {
-  const paths = await glob("**/api/**/*.{js,ts}", {
+  const paths = await globPromise("**/api/**/*.{js,ts}", {
     realpath: true,
   });
 

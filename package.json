@@ -11,7 +11,7 @@
   "author": "Maxime Blanc",
   "license": "ISC",
   "dependencies": {
-    "glob": "9.0.1",
+    "glob": "8.1.0",
     "path-to-regexp": "6.2.1"
   },
   "devDependencies": {
