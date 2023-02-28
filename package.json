@@ -1,6 +1,6 @@
 {
   "name": "vercel-dev-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Node.js server that is emulating Vercel cloud functions. It does support monorepos",
   "main": "./build/main.js",
   "types": "./build/main.d.ts",
