@@ -9,7 +9,7 @@
     "url": "https://github.com/jean-smaug/vercel-dev-server"
   },
   "scripts": {
-    "release": "release-it",
+    "release": "pnpm build && release-it",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
