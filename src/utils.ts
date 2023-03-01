@@ -94,9 +94,11 @@ export function enhanceResponse(response: ServerResponse): VercelResponse {
 
       return enhancedResponse;
     },
-    redirect: () => {
-      // redirect: (statusOrUrl: string | number, url?: string) => {
-      // throw new Error("redirect method not supported");
+    redirect: (statusOrUrl: string | number, url?: string) => {
+      const statusCode = typeof statusOrUrl === "number" ? statusOrUrl : 301;
+
+      response.writeHead(statusCode, { Location: url || statusOrUrl });
+      response.end();
 
       return enhancedResponse;
     },
